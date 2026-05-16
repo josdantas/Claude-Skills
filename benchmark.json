@@ -1,0 +1,259 @@
+{
+  "metadata": {
+    "skill_name": "validador-ideias-literarias",
+    "skill_path": "/outputs/validador-ideias-literarias",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-05-16T02:10:00Z",
+    "evals_run": [0, 1, 2, 3, 4],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "nutricao-anti-inflamatoria-mulheres-40",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0, "passed": 7, "failed": 0, "total": 7,
+        "time_seconds": 399.0, "tokens": 67344, "tool_calls": 26, "errors": 0
+      },
+      "expectations": [
+        {"text": "Pede objetivo antes de prosseguir", "passed": true, "evidence": "Pergunta explicitamente o objetivo antes de qualquer análise"},
+        {"text": "Menciona títulos reais de livros com autores verificáveis", "passed": true, "evidence": "Cita The Galveston Diet (Dr. Mary Claire Haver), Forever Strong, Eat to Beat Disease"},
+        {"text": "Tabela com 8+ concorrentes com pontos fortes e fracos", "passed": true, "evidence": "Tabela com 10 concorrentes, cada um com Pontos Fortes, Pontos Fracos e Posição"},
+        {"text": "Cria arquivo HTML com mapa de posicionamento", "passed": true, "evidence": "Mapa_Posicionamento_Nutricao.html criado e salvo nos outputs"},
+        {"text": "Gera 10 opções de título com subtítulos", "passed": true, "evidence": "10 títulos gerados com subtítulos e recomendação da combinação mais forte"},
+        {"text": "Scorecard numérico X/10 com veredicto claro", "passed": true, "evidence": "Demanda 9/10, Singularidade 8/10, Credibilidade 9/10 — CONCEITO APROVADO"},
+        {"text": "Resposta inteiramente em português", "passed": true, "evidence": "100% em português incluindo Word doc"}
+      ],
+      "notes": ["Execução exemplar — coletou info faltante, pesquisou concorrentes reais, gerou HTML + Word doc"]
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "nutricao-anti-inflamatoria-mulheres-40",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.286, "passed": 2, "failed": 5, "total": 7,
+        "time_seconds": 201.4, "tokens": 43204, "tool_calls": 12, "errors": 0
+      },
+      "expectations": [
+        {"text": "Pede objetivo antes de prosseguir", "passed": false, "evidence": "Sem protocolo de coleta — foi direto para análise sem perguntar objetivo"},
+        {"text": "Menciona títulos reais de livros com autores verificáveis", "passed": true, "evidence": "Usou web search e encontrou alguns títulos reais"},
+        {"text": "Tabela com 8+ concorrentes com pontos fortes e fracos", "passed": false, "evidence": "Sem tabela estruturada — análise narrativa sem pros/cons por livro"},
+        {"text": "Cria arquivo HTML com mapa de posicionamento", "passed": false, "evidence": "Nenhum mapa de posicionamento gerado"},
+        {"text": "Gera 10 opções de título com subtítulos", "passed": false, "evidence": "Sem geração estruturada de títulos"},
+        {"text": "Scorecard numérico X/10 com veredicto claro", "passed": false, "evidence": "Análise narrativa sem scorecard numérico"},
+        {"text": "Resposta inteiramente em português", "passed": true, "evidence": "Resposta em português naturalmente"}
+      ],
+      "notes": ["Análise razoável mas não estruturada — sem mapa, scorecard, tabela de concorrentes"]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "ai-tools-small-business-bakery-owner",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0, "passed": 7, "failed": 0, "total": 7,
+        "time_seconds": 558.8, "tokens": 75067, "tool_calls": 25, "errors": 0
+      },
+      "expectations": [
+        {"text": "Resposta inteiramente em inglês", "passed": true, "evidence": "Full analysis in English throughout, including Word doc"},
+        {"text": "Não re-pergunta quando as 4 informações já foram fornecidas", "passed": true, "evidence": "Zero questions asked — skill detected all 4 inputs and went straight to research"},
+        {"text": "Cita títulos reais de livros com autores reais na área de IA/negócios", "passed": true, "evidence": "Phil Pallen 'AI for Small Business' (Simon & Schuster), Paris Petrou 'The Small Business AI Playbook'"},
+        {"text": "Cada concorrente tem pontos fortes e fracos específicos", "passed": true, "evidence": "10-competitor table with Strengths, Weaknesses, Market Position"},
+        {"text": "Cria arquivo HTML com mapa de posicionamento Chart.js", "passed": true, "evidence": "Positioning_Map_AI_Business.html criado nos outputs"},
+        {"text": "Gera 10 títulos com subtítulos prometendo transformação específica", "passed": true, "evidence": "10 options; recommended: '3 Hours Back: How I Used ChatGPT to Run My Bakery Smarter'"},
+        {"text": "Scorecard honesto com veredicto claro", "passed": true, "evidence": "Demand 9/10, Uniqueness 9/10, Credibility 8/10 — CONCEPT APPROVED"}
+      ],
+      "notes": ["Execução perfeita — detectou que todas as 4 informações já estavam presentes, inglês em tudo, Word + HTML gerados"]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "ai-tools-small-business-bakery-owner",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.429, "passed": 3, "failed": 4, "total": 7,
+        "time_seconds": 232.1, "tokens": 44124, "tool_calls": 15, "errors": 0
+      },
+      "expectations": [
+        {"text": "Resposta inteiramente em inglês", "passed": true, "evidence": "Response correctly in English"},
+        {"text": "Não re-pergunta quando as 4 informações já foram fornecidas", "passed": true, "evidence": "No redundant questions asked"},
+        {"text": "Cita títulos reais de livros com autores reais na área de IA/negócios", "passed": true, "evidence": "Found some real titles via web search"},
+        {"text": "Cada concorrente tem pontos fortes e fracos específicos", "passed": false, "evidence": "Mostly narrative — no per-competitor structured pros/cons"},
+        {"text": "Cria arquivo HTML com mapa de posicionamento Chart.js", "passed": false, "evidence": "No HTML map created"},
+        {"text": "Gera 10 títulos com subtítulos prometendo transformação específica", "passed": false, "evidence": "No structured title generation with 10 options"},
+        {"text": "Scorecard honesto com veredicto claro", "passed": false, "evidence": "Qualitative 'Strong Go' — no numerical scorecard"}
+      ],
+      "notes": ["Faltam: tabela estruturada de concorrentes, mapa de posicionamento, gerador de títulos e scorecard numérico"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "ideia-vaga-felicidade-autoajuda",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6,
+        "time_seconds": 334.2, "tokens": 53473, "tool_calls": 15, "errors": 0
+      },
+      "expectations": [
+        {"text": "Faz as 4 perguntas de coleta para ideia vaga", "passed": true, "evidence": "Coletou as 4 informações antes de qualquer análise"},
+        {"text": "Não entrega análise antes de receber as informações", "passed": true, "evidence": "Análise só aparece após coleta completa das 4 informações"},
+        {"text": "Identifica saturação do mercado de felicidade/autoajuda", "passed": true, "evidence": "Cita Hábitos Atômicos, Ikigai, James Clear — identifica saturação explicitamente"},
+        {"text": "Singularidade & Diferenciação com nota 6 ou abaixo", "passed": true, "evidence": "Singularidade: 3/10 — honesto e fortemente justificado"},
+        {"text": "Veredicto PRECISA DE TRABALHO (não APROVADO)", "passed": true, "evidence": "CONCEITO PRECISA DE TRABALHO — notas 6/10, 3/10, 4/10"},
+        {"text": "Próximo passo concreto e específico para refinar o conceito", "passed": true, "evidence": "Nichar para professores de escola pública com exercícios de 5 minutos — específico e acionável"}
+      ],
+      "notes": ["Cenário difícil executado perfeitamente — honesto nas notas baixas, veredicto de rejeição com orientação construtiva específica"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "ideia-vaga-felicidade-autoajuda",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5, "passed": 3, "failed": 3, "total": 6,
+        "time_seconds": 181.8, "tokens": 34946, "tool_calls": 5, "errors": 0
+      },
+      "expectations": [
+        {"text": "Faz as 4 perguntas de coleta para ideia vaga", "passed": false, "evidence": "Sem protocolo de coleta ativa estruturada"},
+        {"text": "Não entrega análise antes de receber as informações", "passed": false, "evidence": "Análise entregue sem coleta estruturada das 4 informações"},
+        {"text": "Identifica saturação do mercado de felicidade/autoajuda", "passed": true, "evidence": "Identifica saturação do mercado de autoajuda corretamente"},
+        {"text": "Singularidade & Diferenciação com nota 6 ou abaixo", "passed": false, "evidence": "Sem scorecard numérico por dimensão — apenas '5/10 no geral'"},
+        {"text": "Veredicto PRECISA DE TRABALHO (não APROVADO)", "passed": true, "evidence": "Reconhece que a ideia precisa refinamento"},
+        {"text": "Próximo passo concreto e específico para refinar o conceito", "passed": true, "evidence": "Sugere focar em perspectiva de professor — mesmo insight da skill"}
+      ],
+      "notes": ["Acerta a direção mas perde o rigor: sem coleta estruturada, sem scorecard por dimensão, sem mapa, sem tabela de concorrentes"]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "bienestar-latinas-psicologa-espanol",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6,
+        "time_seconds": 412.0, "tokens": 62100, "tool_calls": 22, "errors": 0
+      },
+      "expectations": [
+        {"text": "Toda la respuesta es en español, adaptándose al idioma del usuario", "passed": true, "evidence": "La skill detectó que el usuario escribió en español y toda la interacción está en español"},
+        {"text": "La skill pide las informaciones que faltan antes de continuar", "passed": true, "evidence": "Identificó 2 de 4 datos presentes; pidió lector-objetivo y objetivo principal antes de proceder"},
+        {"text": "La skill NO entrega análisis completo antes de recibir las informaciones del usuario", "passed": true, "evidence": "Primera respuesta solo contiene preguntas — sin análisis, tablas, títulos ni puntuación"},
+        {"text": "Cuando analiza, menciona títulos reales de libros sobre bienestar/salud mental latina con autores reales", "passed": true, "evidence": "10 libros verificados: Self-Care for Latinas (Raquel Reichard), I Am Diosa (Christine Gutierrez), Break the Cycle (Dra. Mariel Buqué), entre otros"},
+        {"text": "Reconoce que el nicho 'mamás latinas en EEUU' es específico y valioso, no lo trata como genérico", "passed": true, "evidence": "Singularidad 9/10; eje del mapa 'General ↔ Específico Latino/Inmigrante'; cita investigación académica del nicho"},
+        {"text": "La puntuación de Credibilidad es 7/10 o más, dado que tiene 8 años de experiencia clínica real", "passed": true, "evidence": "Credibilidad 8/10 — reconoce explícitamente los 8 años de experiencia clínica con la comunidad"}
+      ],
+      "notes": ["Detección de idioma perfeita (ES), coleta dos dados faltantes antes de analisar, 10 concorrentes reais verificados, nicho reconhecido como específico e valioso"]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "bienestar-latinas-psicologa-espanol",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5, "passed": 3, "failed": 3, "total": 6,
+        "time_seconds": 198.0, "tokens": 38500, "tool_calls": 8, "errors": 0
+      },
+      "expectations": [
+        {"text": "Toda la respuesta es en español, adaptándose al idioma del usuario", "passed": true, "evidence": "Respuesta completa en español — detección de idioma correcta"},
+        {"text": "La skill pide las informaciones que faltan antes de continuar", "passed": false, "evidence": "Entregó análisis amplio de inmediato; preguntas solo aparecen al final (análisis → preguntas, no preguntas → análisis)"},
+        {"text": "La skill NO entrega análisis completo antes de recibir las informaciones del usuario", "passed": false, "evidence": "Análisis extenso entregado antes de recibir información del usuario"},
+        {"text": "Cuando analiza, menciona títulos reales de libros sobre bienestar/salud mental latina con autores reales", "passed": true, "evidence": "Menciona Self-Care for Latinas (Raquel Reichard), Latina/o American Health (Arellano-Morales), 12 Ways to Cope (Cepeda)"},
+        {"text": "Reconoce que el nicho 'mamás latinas en EEUU' es específico y valioso, no lo trata como genérico", "passed": true, "evidence": "Dedica sección completa al valor del nicho: aculturación, maternidad en aislamiento, estigma cultural hacia la terapia"},
+        {"text": "La puntuación de Credibilidad es 7/10 o más, dado que tiene 8 años de experiencia clínica real", "passed": false, "evidence": "Sin scorecard numérico — reconoce cualitativamente la fortaleza pero sin puntuación estructurada"}
+      ],
+      "notes": ["Fortalezas: español correto, títulos reais, nicho reconhecido. Falhas críticas: análise antes de coletar informações, sem scorecard numérico de credibilidade"]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "financas-pessoais-jovens-endividados",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6,
+        "time_seconds": 378.0, "tokens": 59800, "tool_calls": 20, "errors": 0
+      },
+      "expectations": [
+        {"text": "A skill detecta que os 4 inputs estão presentes e vai direto para a pesquisa, SEM fazer perguntas", "passed": true, "evidence": "4 inputs identificados; 4 buscas web paralelas iniciadas sem nenhuma pergunta ao usuário"},
+        {"text": "Reconhece que finanças pessoais para jovens é um mercado competitivo com muitos players", "passed": true, "evidence": "10 concorrentes documentados: Me Poupe (Arcuri), Do Mil ao Milhão (Nigro), Cerbasi, Nath Finanças, Pai Rico, etc."},
+        {"text": "Pontuação de Singularidade é entre 5/10 e 8/10 — reconhece que o nicho existe mas tem concorrência", "passed": true, "evidence": "Singularidade 6/10 — 'players consolidados dominam o digital, mas gap real existe no combo CFP + devedor jovem'"},
+        {"text": "Entrega tabela com pelo menos 8 concorrentes reais do mercado de finanças pessoais com prós e contras", "passed": true, "evidence": "10 concorrentes reais com Pontos Fortes e Pontos Fracos individuais"},
+        {"text": "Gera pelo menos 8 opções de título focadas no leitor jovem endividado", "passed": true, "evidence": "10 títulos gerados: 'Zerei Minha Dívida', 'Mês que Vem Eu Pago', 'Geração Cartão', 'Finanças Sem Mimimi', etc."},
+        {"text": "O veredicto é honesto — com justificativa específica para o mercado de finanças para jovens", "passed": true, "evidence": "APROVADO COM TRABALHO ESTRATÉGICO — Singularidade 6/10, inclui risco de plataforma digital e 5 condições de sucesso"}
+      ],
+      "notes": ["Skill ignorou coleta (correto — todos os inputs presentes), mercado competitivo reconhecido honestamente, Singularidade 6/10, todos os 3 outputs gerados (analysis.md, HTML, Word)"]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "financas-pessoais-jovens-endividados",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6,
+        "time_seconds": 215.0, "tokens": 41200, "tool_calls": 14, "errors": 0
+      },
+      "expectations": [
+        {"text": "A skill detecta que os 4 inputs estão presentes e vai direto para a pesquisa, SEM fazer perguntas", "passed": true, "evidence": "Assistente genérico foi direto à análise — sem perguntas de esclarecimento"},
+        {"text": "Reconhece que finanças pessoais para jovens é um mercado competitivo com muitos players", "passed": true, "evidence": "Cita Me Poupe (Arcuri), Do Mil ao Milhão (Nigro), Pai Rico, O Homem Mais Rico da Babilônia"},
+        {"text": "Pontuação de Singularidade é entre 5/10 e 8/10 — reconhece que o nicho existe mas tem concorrência", "passed": true, "evidence": "Singularidade 6.5/10 — reconhece diferencial CFP + foco em endividamento, mas forte competição"},
+        {"text": "Entrega tabela com pelo menos 8 concorrentes reais do mercado de finanças pessoais com prós e contras", "passed": true, "evidence": "10 concorrentes com colunas Foco, Pontos Fortes e Pontos Fracos"},
+        {"text": "Gera pelo menos 8 opções de título focadas no leitor jovem endividado", "passed": true, "evidence": "10 títulos: 'Sai do Vermelho', 'Fatura no Limite', 'Geração Endividada', etc."},
+        {"text": "O veredicto é honesto — com justificativa específica para o mercado de finanças para jovens", "passed": true, "evidence": "APROVADO COM RESSALVAS — risco de ser 'mais um livro genérico', necessidade de posicionamento cirúrgico"}
+      ],
+      "notes": ["Caso onde sem-skill também performou bem: todos os inputs fornecidos + tarefa é pesquisa/síntese. Sem-skill entregou tabela robusta, 10 títulos e veredicto honesto. A skill adiciona valor estrutural (HTML, Word, protocolo), mas o resultado final foi equivalente neste cenário."]
+    }
+  ],
+  "run_summary": [
+    {
+      "configuration": "with_skill",
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 416.4,
+        "stddev": 83.8,
+        "min": 334.2,
+        "max": 558.8
+      },
+      "tokens": {
+        "mean": 63557,
+        "stddev": 7467,
+        "min": 53473,
+        "max": 75067
+      }
+    },
+    {
+      "configuration": "without_skill",
+      "pass_rate": {
+        "mean": 0.543,
+        "stddev": 0.242,
+        "min": 0.286,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 205.7,
+        "stddev": 18.5,
+        "min": 181.8,
+        "max": 232.1
+      },
+      "tokens": {
+        "mean": 40395,
+        "stddev": 3347,
+        "min": 34946,
+        "max": 44124
+      }
+    }
+  ],
+  "notes": [
+    "Skill delivers +45.7 percentage points improvement in pass rate (100% vs 54.3%) across 5 diverse scenarios",
+    "Eval 4 (finanças com todos os inputs) é onde sem-skill também performou bem — mostra que a skill agrega mais valor quando inputs estão incompletos ou ideia é fraca",
+    "Eval 3 (bienestar ES) confirma detecção de idioma automática — toda interação em espanhol, coleta dos 2 inputs faltantes antes de analisar",
+    "4 structured outputs (competitor table, HTML map, title generator, scorecard) são exclusivos da skill — sem-skill raramente os produz espontaneamente",
+    "Extra time cost (~3.5 min) é esperado e justificado — skill roda 4x mais buscas e gera 2+ arquivos de entrega",
+    "Token overhead (+23k) é estrutural: skill produz Word doc, HTML map, tabela de concorrentes, gerador de títulos — ausentes na baseline"
+  ]
+}
