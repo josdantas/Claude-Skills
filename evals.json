@@ -1,0 +1,23 @@
+{
+  "skill_name": "validador-ideias-literarias",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Quero validar uma ideia de livro. Sou nutricionista há 12 anos e quero escrever sobre alimentação anti-inflamatória para mulheres com mais de 40 anos que sofrem de cansaço crônico e ganho de peso inexplicável. Será que tem mercado pra isso?",
+      "expected_output": "A skill deve: (1) fazer as 4 perguntas de coleta ativas pois falta objetivo principal, (2) após resposta do usuário, pesquisar concorrentes reais na web, (3) entregar análise completa com tabela de 10 concorrentes com prós/contras, (4) gerar mapa de posicionamento HTML salvo como arquivo, (5) gerar 10 títulos com subtítulos, (6) entregar pontuação de publicabilidade com veredicto honesto, (7) salvar relatório Word.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "I want to write a book about using AI tools to run a small business without a tech background. I've been running my own bakery for 8 years and started using ChatGPT and other AI tools last year to handle my marketing, invoices, and customer responses. It saved me 3 hours a day. I want to write for other small business owners like me. My goal is income and building authority in this space.",
+      "expected_output": "The skill should: (1) confirm the 4 inputs are complete (they are) and proceed directly to web research, (2) research 10 real competitor books in English on AI for small business/non-tech entrepreneurs, (3) deliver full competitor table with strengths/weaknesses, (4) generate HTML positioning map saved as file, (5) generate 10 title options, (6) deliver publishability score with honest verdict, (7) save Word document.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Tenho uma ideia meio vaga ainda... quero escrever algo sobre felicidade. Tipo, um livro que ajude as pessoas a serem mais felizes no dia a dia. Acho que todo mundo precisa disso né?",
+      "expected_output": "A skill deve: (1) fazer as 4 perguntas de coleta pois a ideia é muito vaga e faltam histórico, leitor-alvo e objetivo, (2) após receber respostas, pesquisar o mercado saturado de autoajuda/felicidade, (3) na pontuação, dar nota baixa em singularidade/diferenciação pois 'felicidade' é extremamente genérico, (4) veredicto deve ser PRECISA DE TRABALHO com orientação específica para afiar o conceito antes de prosseguir.",
+      "files": []
+    }
+  ]
+}
