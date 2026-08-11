@@ -1,0 +1,39 @@
+# Política de confiança do ARCA — configuração versionada, não constante de código.
+# Alterar este arquivo muda o comportamento de segurança do sistema e exige
+# revisão do engenheiro de segurança (ver plano §14, item 4).
+version: 1
+
+source_classes:
+  user_direct:
+    initial_status: trusted
+    weight: 1.00
+    may_instruct: true
+
+  user_document:
+    initial_status: trusted
+    weight: 0.85
+    may_instruct: false
+
+  agent_inference:
+    initial_status: candidate
+    weight: 0.60
+    may_instruct: false
+    default_ttl: P30D
+
+  tool_output:
+    initial_status: candidate
+    weight: 0.50
+    may_instruct: false
+    default_ttl: P30D
+
+  web_content:
+    initial_status: quarantined
+    weight: 0.30
+    may_instruct: false
+    default_ttl: P7D
+
+  third_party_agent:
+    initial_status: quarantined
+    weight: 0.20
+    may_instruct: false
+    default_ttl: P7D
